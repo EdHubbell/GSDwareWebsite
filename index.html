@@ -35,7 +35,6 @@
         <link rel="stylesheet" href="css/animate.css">
 
 
-
         <link href='css/style.css' rel='stylesheet' type='text/css'> 
         <link href='css/responsive.css' rel='stylesheet' type='text/css'>
 
@@ -57,11 +56,10 @@
     <body>
 
 
-        <div id="wrapper"  >
-
+        <div id="wrapper" ng-controller="HomeController" >
             <div class="top_wrapper">
-                <div ng-include src="top-bar.html"></div>
-                <div ng-include src="header.html"></div>
+                <div ng-include src="'top-bar.html'"></div>
+                <div ng-include src="'header.html'"></div>
 
                 <div class="rev-slider-full">
                     <div class="rev-slider-banner-full  rev-slider-full">
@@ -1059,7 +1057,7 @@
                 </div>
             </div><!--.content-wrapper end -->
 
-            <div ng-include src="footer.html"></div>
+            <div ng-include src="'footer.html'"></div>
 
         </div><!-- wrapper end -->
 
@@ -1090,7 +1088,12 @@
         <script src="js/jQuery.XDomainRequest.js" type="text/javascript"></script> 
         <script src="js/kanzi.js" type="text/javascript"></script> 
         <script src="js/retina.js" type="text/javascript"></script> 
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+
         <script src="app/app.js" type="text/javascript"></script> 
 
     </body>
