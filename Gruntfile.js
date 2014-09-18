@@ -20,7 +20,7 @@ module.exports = function( grunt ) {
     watch: {
       livereload: {
         files: [
-          '{,*/}*.html',
+          '{,*/}*.*html',
           'static/{,*/}*.{css,js,png,jpg,gif,svg}'
         ],
         tasks: ['jshint'],
