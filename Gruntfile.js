@@ -49,7 +49,7 @@ module.exports = function( grunt ) {
       server: {
         url: 'http://localhost:<%= connect.options.port %>'
       }
-    }
+    }    
   });
  
   grunt.registerTask('server', function() {
