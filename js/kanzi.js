@@ -149,10 +149,10 @@ jQuery(document).ready(function($) {
 
     //Fixed Size
     $('.rev-slider-banner-fixed').revolution({
-        delay: 5000,
+        delay: 9000,
         startwidth: 926,
         startheight: 430,
-        onHoverStop: "on",
+        onHoverStop: "off",
         thumbWidth: 100,
         thumbHeight: 50,
         thumbAmount: 3,
@@ -188,10 +188,10 @@ jQuery(document).ready(function($) {
 
     /* Full */
     $('.rev-slider-banner-full').revolution({
-        delay: 5000,
+        delay: 9000,
         startwidth: 1170,
         startheight: 500,
-        onHoverStop: "on",
+        onHoverStop: "off",
         thumbWidth: 100,
         thumbHeight: 50,
         thumbAmount: 3,
