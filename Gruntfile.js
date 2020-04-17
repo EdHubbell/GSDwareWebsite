@@ -15,7 +15,7 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-open');
-  grunt.loadNpmTasks( "grunt-bake" );
+  grunt.loadNpmTasks('grunt-bake');
 
   grunt.initConfig({
     bake: {
@@ -44,16 +44,24 @@ module.exports = function( grunt ) {
       },
     },
     watch: {
+      options: {
+        livereload: true
+      },
       bake: {
         files: [ "bake_html/**" ],
         tasks: "bake:build"
       },
+//      rebuilt: {    // You need a task, can be any string
+//        files: [   // Files to livereload on
+//            "*.html"
+//        ]
+//      }
     },
     connect: {
       server: {
         options: {
           port: 9000,
-//          keepAlive: true,  
+//          livereload: true,  
           base: {
             path: '.',
             options: {
