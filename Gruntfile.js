@@ -1,6 +1,9 @@
 'use strict';
  
 // thank you, https://gist.github.com/adion/7580522 
+// april 2020 moved away from using server side includes because they are 
+// difficult to deal with locally. So now we use bake to jam in html from where
+// it needs to go. This took waaaay too long to accomplish. Like, 4 or 5 hours. It's 4AM. Fuuuck....
 
 var
 //  LIVERELOAD_PORT = 35729,
@@ -44,6 +47,7 @@ module.exports = function( grunt ) {
       },
     },
     watch: {
+      // can't get the livereload working. Fuck it. Hit refresh.
       options: {
         livereload: true
       },
@@ -51,42 +55,26 @@ module.exports = function( grunt ) {
         files: [ "bake_html/**" ],
         tasks: "bake:build"
       },
-//      rebuilt: {    // You need a task, can be any string
-//        files: [   // Files to livereload on
-//            "*.html"
-//        ]
-//      }
+      html: {
+        files: ['*.html']
+      }
     },
     connect: {
-      server: {
+      all: {
         options: {
           port: 9000,
-//          livereload: true,  
-          base: {
-            path: '.',
-            options: {
-              index: 'index.html',
-    //         redirect: false,
-            },
-          },
-        }
+          base: '.',
+          hostname: '0.0.0.0',
+          protocol: 'http',
+          keepalive: true,
+          livereload: true,
+          open: true,          
+        },       
       },     
     },
-    open: {
-      file : {
-        path : 'http://localhost:<%= connect.server.options.port %>'
-      },
-    }    
   });
  
-  grunt.registerTask('server', function() {
-    grunt.task.run([
-      'bake:build',
-      'connect:server',
-      'open:file',
-      'watch'
-    ]);
-  });
+  grunt.registerTask('server', ['bake:build', 'connect', 'watch' ]);
  
   grunt.registerTask('default', [ 'server' ]);
 };
