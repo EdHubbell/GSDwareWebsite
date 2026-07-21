@@ -1,0 +1,20 @@
+[
+  { "from": "burst.html", "to": "/services/ai-development/" },
+  { "from": "relay.html", "to": "/services/ai-development/" },
+  { "from": "capitalize.html", "to": "/services/ai-development/" },
+  { "from": "contractDevelopment.html", "to": "/services/ai-development/" },
+  { "from": "dataVisibility.html", "to": "/services/manufacturing/" },
+  { "from": "windowsApps.html", "to": "/services/manufacturing/" },
+  { "from": "mobileDevices.html", "to": "/services/manufacturing/" },
+  { "from": "iotTracking.html", "to": "/services/manufacturing/" },
+  { "from": "technology.html", "to": "/" },
+  { "from": "cloud.html", "to": "/" },
+  { "from": "productDevelopment.html", "to": "/" },
+  { "from": "projectManagement.html", "to": "/" },
+  { "from": "siteInfo.html", "to": "/" },
+  { "from": "byoDirectory.html", "to": "/" },
+  { "from": "about.html", "to": "/about/" },
+  { "from": "team.html", "to": "/about/" },
+  { "from": "faq.html", "to": "/contact/" },
+  { "from": "contact.html", "to": "/contact/" }
+]
