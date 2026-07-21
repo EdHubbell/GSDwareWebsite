@@ -15,6 +15,6 @@ eleventyExcludeFromCollections: true
   <title>Redirecting…</title>
 </head>
 <body>
-  <p>This page has moved. <a href="{{ redirect.to }}">Continue →</a></p>
+  <p>This page has moved. <a href="{{ redirect.to | htmlBaseUrl }}">Continue →</a></p>
 </body>
 </html>
