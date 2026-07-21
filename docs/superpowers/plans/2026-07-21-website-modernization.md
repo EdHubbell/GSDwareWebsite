@@ -634,16 +634,16 @@ eleventyExcludeFromCollections: true
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url={{ redirect.to | htmlBaseUrl }}">
-  <link rel="canonical" href="{{ redirect.to | htmlBaseUrl }}">
+  <meta http-equiv="refresh" content="0; url={{ redirect.to }}">
+  <link rel="canonical" href="{{ redirect.to }}">
   <title>Redirecting…</title>
 </head>
 <body>
-  <p>This page has moved. <a href="{{ redirect.to | htmlBaseUrl }}">Continue →</a></p>
+  <p>This page has moved. <a href="{{ redirect.to }}">Continue →</a></p>
 </body>
 </html>
 ```
-Note: no `layout` key — this template is a complete standalone document.
+Note: HtmlBasePlugin's HTML transform rewrites these URLs at build time, so no filter needed.
 
 - [ ] **Step 3: Build and verify**
 
