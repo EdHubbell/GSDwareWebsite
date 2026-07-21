@@ -1,14 +1,14 @@
 {
-  "engines": {
-    "node": ">= 0.10.0"
+  "name": "gsdware-website",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
   },
   "devDependencies": {
-    "connect-livereload": "~0.4.0",
-    "grunt": "^1.6.1",
-    "grunt-bake": "^1.9.0",
-    "grunt-contrib-connect": "^2.1.0",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-open": "^0.2.4",
-    "grunt-ssi": "^0.2.1"
+    "@11ty/eleventy": "^3.0.0"
   }
 }
