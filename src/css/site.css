@@ -33,15 +33,15 @@ img { max-width: 100%; height: auto; }
 .site-nav a:hover { color: var(--accent); }
 
 /* Hero */
-.hero { padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 4rem); }
+.hero { max-width: 80ch; margin-inline: auto; padding: clamp(3rem, 8vw, 6rem) 0 clamp(2rem, 5vw, 4rem); }
 .hero h1 {
   font-size: clamp(2rem, 1.4rem + 3vw, 3.25rem);
   line-height: 1.1; letter-spacing: -0.02em;
-  margin: 0 0 1rem; max-width: 22ch;
+  margin: 0 0 1rem;
 }
 .hero .lede {
   font-size: clamp(1.05rem, 1rem + 0.5vw, 1.3rem);
-  color: var(--muted); max-width: 55ch; margin: 0 0 1.75rem;
+  color: var(--muted); margin: 0 0 1.75rem;
 }
 
 /* Buttons */
