@@ -591,7 +591,7 @@ Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>"
 
 **Interfaces:**
 - Consumes: successor page paths from Tasks 4–6 (`/`, `/services/*`, `/about/`, `/contact/`)
-- Produces: an HTML stub at every old flat `*.html` path, each meta-refreshing to its successor. Uses HtmlBasePlugin's `htmlBaseUrl` filter so redirect targets work under `PATH_PREFIX` too.
+- Produces: an HTML stub at every old flat `*.html` path, each meta-refreshing to its successor. HtmlBasePlugin's HTML transform rewrites the target URLs at build time, so they work under `PATH_PREFIX` too (no explicit filter — the transform handles meta refresh, canonical, and anchor URLs).
 
 - [ ] **Step 1: Write src/_data/redirects.json**
 
