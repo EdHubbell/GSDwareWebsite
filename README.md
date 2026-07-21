@@ -22,6 +22,7 @@ Notes:
 - Header nav and footer (shared by every page) live in `src/_includes/base.njk`.
 - Styles are all in `src/css/site.css`. Body text sits in a centered 80-character column (`.prose`, `.hero`).
 - Write internal links root-relative (`/about/`, `/contact/`) — the build rewrites them for the deploy environment automatically.
+- The home hero headline in `src/index.njk` contains a manual `<br>` that forces its two-line break — keep (or move) it if you reword the headline.
 
 ## Preview locally
 

@@ -14,7 +14,7 @@ Static marketing website for GSDware (gsdware.com), built with Eleventy v3 and d
 ## Structure
 
 - `src/_includes/base.njk` — the single layout (head, header/nav, footer). Every page sets `layout: base.njk` plus `title` and `description` front matter.
-- Pages are Nunjucks files; permalinks come from file paths (`src/services/manufacturing.njk` → `/services/manufacturing/`). Only `404.njk` sets an explicit permalink.
+- Pages are Nunjucks files; permalinks come from file paths (`src/services/manufacturing.njk` → `/services/manufacturing/`). `404.njk` and `redirects.njk` set explicit permalinks; all other pages derive theirs from file path.
 - `src/css/site.css` — the entire stylesheet, hand-written. No CSS frameworks, no client-side JS. Keep it that way absent a strong reason.
 - `src/_data/redirects.json` + `src/redirects.njk` — meta-refresh stubs mapping the old flat `*.html` URLs to current pages. Add an entry when a page moves.
 - `src/static/` — files copied to the site root (favicons, CNAME).
